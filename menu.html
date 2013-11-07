@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dawg Pizza - Menu</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon_.ico">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<div id="header-pic" title="Dawg Pizza logo">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li class="active">MENU</li>
+				<li><a href="about.html">ABOUT US</a></li>				
+			</ul>
+		</nav>
+	</header>
+	<div class="main-content" itemscope itemtype="http://schema.org/Restaurant">
+		<ul id="contact-info" itemprop="contactPoints" itemscope itemtype="http://schema.org/ContactPoint">
+			<li itemprop="telephone">Call us for delivery: 206-555-1212</li>
+			<li itemprop="email"><a href="mailto:dawgpizzaseattle@gmail.com">dawgpizzaseattle@gmail.com</a></li>
+		</ul>
+		<main class="story-impact"> 
+			<h4>The Deal:</h4>
+			<h5>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:</h5>
+			<pre class="pizza-sizes"><span id="small-pizza">Small (12")</span> / <span id="med-pizza">Medium (14")</span> / <span id="big-pizza">Large (17")</span></pre>
+			<h5>All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</h5>
+		</main>
+
+		<!-- sections for menu items -->
+		<section id="pizzas" class="food">
+		</section>
+		<section id="drinks" class="food">
+		</section>
+		<section id="desserts" class="food">
+		</section>
+		<footer>
+			<p class="bigwords">&copy; 2013 Dawg Pizza Inc.</p>
+		</footer>
+	</div>
+
+	<!-- link to jQuery -->
+	<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
+	<!-- direct link to menu script -->
+	<script src="http://www.dawgpizza.com/orders/menu.js"></script>
+	<!-- my own JavaScript file, which will use the menu data structure -->
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+@import url('reset.css');
+
+
+/* Animations */
+
+@keyframes bounce {
+	0% {background-position: center}
+	33% {background-position: right center}
+	66% {background-position: left center}
+	99% {background-position: center}
+}
+
+@-webkit-keyframes bounce {
+	0% {background-position: center}
+	33% {background-position: right center}
+	66% {background-position: left center}
+	99% {background-position: center}
+}
+/* General styles */
+
+html {
+	background: url(../img/pizza1.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	/* Fallback color */
+	background-color: #e1ded2;
+	font-family: 'Oswald', sans-serif;
+}
+
+body {
+	font-size: 16px;
+}
+
+
+h1 {
+	font-size: 8em;
+	font-weight: bold;
+	display: inline;
+	line-height: 225px;
+}
+
+h3 {
+	font-size: 3em;
+}
+
+h4 {
+	font-size: 2.5em;
+}
+
+section span {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.drink-prices {
+	color: black;
+	display: inline;
+}
+
+.column a:hover {
+	color: white;
+}
+
+.active {
+	color: #0776A0;
+	padding: 0 60px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: black;
+	width: 100%;
+	opacity: .7;
+	text-align: center;
+	font-size: .8em;
+}
+
+address {
+	font-size: 1.5em;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+	text-align: left;
+	line-height: 130%;
+}
+
+.col-group {
+	width: 100%;
+}
+nav {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	opacity: .9;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	background:#142326;
+}
+
+ul li {
+	list-style: none;
+	font-size: 2em;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+iframe {
+	width: 100%;
+}
+ul a {
+	display: inline-block;
+	color: white;
+	padding: 10px;
+}
+
+#contact-info li,
+#contact-info a {
+	color: black;
+	padding: 0px;
+	display: block;
+}
+
+#contact-info {
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+footer p {
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+
+/* Main div styling */
+
+#header-pic {
+		background-image: url(../img/logo.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 85px;
+		width: 100%;
+		background-position: center;
+/*		background-color: #142326;
+*/}
+
+#header-pic:hover {
+	animation: bounce 2s 1;
+	-webkit-animation: bounce 2s 1;
+}
+.main-content {
+	width: 60%;
+	max-width: 1280px; 
+	margin: 0px auto 15px;
+	max-width: 1006px;
+/*	background: #e1ded2;
+*/}
+
+/* Positioning images */
+
+#logo {
+	vertical-align: middle;
+}
+
+.pull-left {
+	float: left;
+}
+
+.bottom-pic {
+	width: 100%;
+	height: 345px;
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+
+/* specifically index.shtml only */
+
+.home-main {
+	width:100%;
+}
+
+.column {
+	width: 33.333333333333333%;
+	float: left;
+	height: 155px;
+	box-sizing: border-box;
+}
+
+.column h3 {
+	color: white;
+	text-align: center;
+	padding-top: 3px;
+}
+
+.centered-h3 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 2em;
+
+}
+
+
+.column h4 {
+	padding-top: 10px;
+	font-size: 1.5em;
+	color: black;
+	text-align: center;
+
+}
+
+.column address {
+	text-align: center;
+}
+/* specifically menu.shtml only */
+
+#pizzas {
+	box-sizing: border-box;
+}
+
+#pizzas h4 {
+	-webkit-column-span: all;
+	column-span: all;
+}
+.food span {
+	font-size: 1.1em;
+}
+
+.menu-items {
+	line-height: 170%;
+}
+
+.food {
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+}
+
+.food h4 {
+	padding-bottom: 10px;
+}
+
+dl,
+.food h5 {
+	font-size: 1.1em;
+	padding-left: 10px;
+	line-height: 140%;
+}
+
+dt,
+.pricing {
+	color: black;
+}
+
+dd,
+.food h5 {
+	padding-left: 10px;
+}
+
+.pricing {
+	display: block;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+
+
+/* specifically about.shtml only */
+
+.story-impact {
+	text-align: justify;
+	background: rgba(225, 222, 210, .5);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.story-impact h4 {
+	padding: 10px 0px 10px 10px;
+}
+
+.story-impact h5 {
+	font-size: 1.2em;
+	padding-left: 35px;
+	padding-right: 15px;
+	line-height: 130%;
+}
+
+.pizza-sizes {
+	padding: 12px 0px 12px 45px;
+	text-align: left;
+}
+
+.bottom-left-radius {
+	border-bottom-left-radius: 5px;
+}
+
+.bottom-right-radius {
+	border-bottom-right-radius: 5px;
+}
+
+hr {
+	margin-bottom: 1px;
+}
+.story-impact h5:last-child {
+	padding-bottom: 10px;
+}
+
+/* Specialized font sizes */
+
+#small-pizza {
+	font-size: 1em;
+}
+
+#med-pizza {
+	font-size: 1.2em;
+}
+
+#big-pizza {
+	font-size: 1.4em;
+}
+
+.bigwords {
+	font-size: 1.4em;
+
+}
+
+/* Colorful blocks and pieces of text */
+
+#meatpies,
+#left {
+	background: #FF2C00;
+}
+
+#vegpies {
+	background: #34D800;
+}
+
+#green {
+	color: #006E00;
+}
+#drinks,
+#middle {
+	background: #0776A0;
+}
+
+#desserts {
+	background: #FF8500;
+}
+
+.purple {
+	color: #39275B;
+}
+
+#right {
+	background: #84E900;
+}
+
+#pizza {
+	color: #FF0000;
+}
+
+nav a:hover,
+#contact-info a:last-child:hover,
+#best {
+ 	color: #FFEC1C;
+ }
+
+#pizzas {
+			-moz-column-count:2; /* Firefox */
+			-webkit-column-count:2; /* Safari and Chrome */
+			column-count:2;
+			-moz-column-gap:10px; /* Firefox */
+			-webkit-column-gap:10px; /* Safari and Chrome */
+			column-gap:10px;
+			-moz-column-fill:balance;
+			-webkit-column-fill: balance;
+			column-fill:balance;
+			-webkit-column-break-inside: avoid;
+			column-break-inside: avoid;
+			background: red;
+			width: 100%;
+			clear: both;
+		}
+/* Media queries */
+
+@media screen and (max-width:768px) {
+	.main-content {
+		width:100%;
+	}
+
+	body {
+		font-size: 18px;
+	}
+
+	.column {
+		width: 100%;
+	}
+
+	nav ul li,
+	nav ul li a,
+	.active {
+		display: block;
+		padding: 2px;
+	}
+
+	#pizzas {
+		-moz-column-count:1; /* Firefox */
+			-webkit-column-count:1; /* Safari and Chrome */
+			column-count:1;
+
+	}
+
+	.food h4 {
+		font-size: 1.7em;
+	}
+}
+
+
+@media screen and (min-width: 769px) {
+	.main-content {
+		width: 100%;
+	}
+
+	address {
+		font-size: 1.4em;
+	}
+
+		#header-pic {
+		height: 170px;
+	}	
+}
+
+@media screen and (max-width: 1000px) {
+	.main-content {
+		width: 100%;
+	}
+
+	.story-impact {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 00px;
+	}
+
+}
