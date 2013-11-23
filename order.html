@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dawg Pizza - Order</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon_.ico">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<div id="header-pic" title="Dawg Pizza logo">
+		</div>
+		<nav class="center-text">
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="menu.html">MENU</a></li>
+				<li class="active">ORDER</li>
+				<li><a href="about.html">ABOUT US</a></li>				
+			</ul>
+		</nav>
+	</header>
+	<div class="main-content" itemscope itemtype="http://schema.org/Restaurant">
+		<ul class="center-text" id="contact-info" itemprop="contactPoints" itemscope itemtype="http://schema.org/ContactPoint">
+			<li itemprop="telephone">Call us for delivery: 206-555-1212</li>
+			<li itemprop="email"><a href="mailto:dawgpizzaseattle@gmail.com">dawgpizzaseattle@gmail.com</a></li>
+		</ul>
+		<main> 
+			<!-- <div id="pizza-prices" class="pizza-pricing">
+				<button class="add-pizza" type="button" data-type="pizza" data-name=""data-size="small" data-price="" title="">S - </button>
+				<button class="add-pizza" type="button" data-type="pizza" data-name=""data-size="medium" data-price="" title="">M - </button>
+				<button class="add-pizza" type="button" data-type="pizza" data-name=""data-size="large" data-price="" title="">L - </button>
+			</div> -->
+		</main>
+
+		<!-- sections for menu items -->
+		<section id="order-pizza" class="pizza-styles center-text food">
+			<h4>Pizzas</h4>
+		</section>
+		<section id="drinks" class="food center-text">
+		</section>
+		<section id="desserts" class="food center-text">
+		</section>
+		<footer class="center-text">
+			<p class="bigwords">&copy; 2013 Dawg Pizza Inc.</p>
+		</footer>
+	</div>
+
+	<div class="templates">
+		<!-- add pizza to cart buttons -->
+		<div class="pizza-pricing">
+			<button id="sm" class="add-pizza" type="button" data-type="pizza" data-name="" data-size="small" data-price="" title="">Sm - $</button>
+			<button id="md" class="add-pizza" type="button" data-type="pizza" data-name="" data-size="medium" data-price="" title="">Md - $</button>
+			<button id="lg" class="add-pizza" type="button" data-type="pizza" data-name="" data-size="large" data-price="" title="">Lg - $</button>
+		</div>
+
+		<!-- add drink/dessert to cart buttons -->
+		<button id="add-drink" class="add-drink-button" type="button" data-type="drink" data-name="" data-price="" title="">+</button>
+	</div>
+	<input type="hidden" name="cart">
+	<!-- link to jQuery -->
+	<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
+	<!-- direct link to menu script -->
+	<script src="http://www.dawgpizza.com/orders/menu.js"></script>
+	<!-- my own JavaScript file, which will use the menu data structure -->
+	<script src="js/order-system.js"></script>
+</body>
+</html>

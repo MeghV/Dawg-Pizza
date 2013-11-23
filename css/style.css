@@ -1,21 +1,5 @@
 @import url('reset.css');
 
-
-/* Animations */
-
-@keyframes bounce {
-	0% {background-position: center}
-	33% {background-position: right center}
-	66% {background-position: left center}
-	99% {background-position: center}
-}
-
-@-webkit-keyframes bounce {
-	0% {background-position: center}
-	33% {background-position: right center}
-	66% {background-position: left center}
-	99% {background-position: center}
-}
 /* General styles */
 
 html {
@@ -58,6 +42,9 @@ a {
 	color: black;
 }
 
+.center-text {
+	text-align: center;
+}
 .drink-prices {
 	color: black;
 	display: inline;
@@ -80,7 +67,6 @@ footer {
 	background: black;
 	width: 100%;
 	opacity: .7;
-	text-align: center;
 	font-size: .8em;
 }
 
@@ -100,7 +86,6 @@ address {
 nav {
 	width: 100%;
 	position: relative;
-	text-align: center;
 	opacity: .9;
 }
 
@@ -136,11 +121,16 @@ ul a {
 
 #contact-info {
 	width: 100%;
-	text-align: center;
 	padding: 0;
 	margin-bottom: 15px;
 }
 
+hr {
+	border: 0;
+    height: 2px;
+    background: #333;
+    margin-bottom: 15px;
+}
 footer p {
 	color: white;
 	padding-top: 10px;
@@ -148,7 +138,42 @@ footer p {
 	padding-left: 5px;
 }
 
+.pizza-pricing {
+	text-align: center;
+}
+.add-pizza {
+	margin-bottom: 5px;
+	width: 30%;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+	padding: 14px 26px;
+	font-size: 1.1em;
+	line-height: 100%;
+	color: white;
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	background-color: #3fb8e8;
+	box-shadow: 0px 3px 0px 0px #3293ba;
+}
 
+.add-pizza:active {
+	padding-top: 15px;
+    margin-bottom: -1px;
+}
+
+.add-drink-button {
+	font-size: 1.1em;
+	font-family: sans-serif;
+	cursor: pointer;
+	background: none;
+	border: 2px solid black;
+}
+
+.click-add-drink-button {
+	background: green;
+}
 /* Main div styling */
 
 #header-pic {
@@ -161,10 +186,10 @@ footer p {
 /*		background-color: #142326;
 */}
 
-#header-pic:hover {
-	animation: bounce 2s 1;
-	-webkit-animation: bounce 2s 1;
+.templates {
+	display: none;
 }
+
 .main-content {
 	width: 60%;
 	max-width: 1280px; 
@@ -205,7 +230,6 @@ footer p {
 
 .column h3 {
 	color: white;
-	text-align: center;
 	padding-top: 3px;
 }
 
@@ -222,13 +246,8 @@ footer p {
 	padding-top: 10px;
 	font-size: 1.5em;
 	color: black;
-	text-align: center;
-
 }
 
-.column address {
-	text-align: center;
-}
 /* specifically menu.shtml only */
 
 #pizzas {
@@ -236,6 +255,7 @@ footer p {
 }
 
 #pizzas h4 {
+	-moz-column-span: all;
 	-webkit-column-span: all;
 	column-span: all;
 }
@@ -315,9 +335,6 @@ dd,
 	border-bottom-right-radius: 5px;
 }
 
-hr {
-	margin-bottom: 1px;
-}
 .story-impact h5:last-child {
 	padding-bottom: 10px;
 }
@@ -336,16 +353,11 @@ hr {
 	font-size: 1.4em;
 }
 
-.bigwords {
-	font-size: 1.4em;
-
-}
-
 /* Colorful blocks and pieces of text */
 
 #meatpies,
 #left {
-	background: #FF2C00;
+	background: #FFA42A;
 }
 
 #vegpies {
@@ -362,6 +374,7 @@ hr {
 
 #desserts {
 	background: #FF8500;
+	margin-bottom: 50px;
 }
 
 .purple {
@@ -392,12 +405,19 @@ nav a:hover,
 			-moz-column-fill:balance;
 			-webkit-column-fill: balance;
 			column-fill:balance;
+			-moz-column-break-inside: avoid;
 			-webkit-column-break-inside: avoid;
 			column-break-inside: avoid;
-			background: red;
+			-moz-column-rule: 1px solid black;
+			-webkit-column-rule: 1px solid black;
+			column-rule: 1px solid black;  
+}
+
+.pizza-styles {
+			background: #FFA42A;
 			width: 100%;
 			clear: both;
-		}
+}
 /* Media queries */
 
 @media screen and (max-width:768px) {
@@ -430,6 +450,12 @@ nav a:hover,
 	.food h4 {
 		font-size: 1.7em;
 	}
+
+	.main-content ul {
+		font-size: .9em;
+		margin-bottom: 10px;
+	}
+
 }
 
 
