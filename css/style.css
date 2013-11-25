@@ -141,9 +141,12 @@ footer p {
 .pizza-pricing {
 	text-align: center;
 }
-.add-pizza {
+.add-pizza,
+.add-other,
+.done-order,
+.restart-order {
+	margin-top: 15px;
 	margin-bottom: 5px;
-	width: 30%;
 	box-sizing: border-box;
 	font-family: 'Oswald', sans-serif;
 	padding: 14px 26px;
@@ -158,11 +161,32 @@ footer p {
 	box-shadow: 0px 3px 0px 0px #3293ba;
 }
 
-.add-pizza:active {
+.remove-item {
+	background-color: #3fb8e8;
+	cursor: pointer;
+	color: white;
+	vertical-align: middle;
+}
+.add-pizza:active,
+.add-other:active {
 	padding-top: 15px;
     margin-bottom: -1px;
 }
+.done-order:active,
+.restart-order:active {
+	padding-top: 15px;
+	margin-bottom: 4px;
+}
+#personal-info {
+	display: none;
+}
+.add-pizza {
+	width: 30%;
+}
 
+.add-other {
+	width: 27%;
+}
 .add-drink-button {
 	font-size: 1.1em;
 	font-family: sans-serif;
@@ -301,25 +325,82 @@ dd,
 	padding-left: 10px;
 }
 
+.cart-container {
+	width: 95%;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
 
-/* specifically about.shtml only */
+#submit {
+	display: none;
+}
+.col-xs-10 {
+	width: 83.3333333334%;
+}
 
-.story-impact {
+.col-xs-2 {
+	width: 16.6666666666%;
+}
+
+.col-xs-2, .col-xs-10 {
+	float: left;
+}
+
+.size, .title, .price {
+	font-size: 1.3em;
+}
+#order-pizza {
+	border-top: 1px solid black;
+	max-width: 1006px;
+}
+.story-impact, .order-top {
 	text-align: justify;
-	background: rgba(225, 222, 210, .5);
+	padding-left:10px;
+	padding-bottom: 15px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
+.order-bg {
+	background: rgba(225, 222, 210, .5);
+}
+.order-top h3{
+	display: inline;
+}
+
+.cart-footer {
+	width: 95%;
+	border-top: 2px solid black;
+	clear: both;
+}
+.restart {
+	height: 35px;
+	width: 35px;
+	background-image: url(../img/restart2.png);
+	background-position: center center;
+	background-size: 35px 35px;
+	background-repeat: no-repeat;
+}
 .story-impact h4 {
 	padding: 10px 0px 10px 10px;
 }
 
+.remove-item {
+	cursor: pointer;
+	padding: 10px 10px;
+}
 .story-impact h5 {
 	font-size: 1.2em;
 	padding-left: 35px;
 	padding-right: 15px;
 	line-height: 130%;
+}
+
+.notice {
+	padding-left: 5px;
+	padding-top: 5px;
+	margin-bottom: 10px;
+	font-size: 1.2em;
 }
 
 .pizza-sizes {
@@ -367,12 +448,12 @@ dd,
 #green {
 	color: #006E00;
 }
-#drinks,
+#drink,
 #middle {
 	background: #0776A0;
 }
 
-#desserts {
+#dessert {
 	background: #FF8500;
 	margin-bottom: 50px;
 }
@@ -415,7 +496,6 @@ nav a:hover,
 
 .pizza-styles {
 			background: #FFA42A;
-			width: 100%;
 			clear: both;
 }
 /* Media queries */
