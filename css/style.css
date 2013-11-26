@@ -333,6 +333,7 @@ dd,
 
 #submit {
 	display: none;
+	min-width: 181px;
 }
 .col-xs-10 {
 	width: 83.3333333334%;

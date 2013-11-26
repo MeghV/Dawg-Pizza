@@ -97,13 +97,21 @@ $(function () {
         if (cart.items.length > 0) {
             if (confirm("Is it OK to restart your order?")) {
                 cart.items.length = 0; //clears array
-                renderCart(cart, $('.cart-container'));
-            }
-            $(".add-to-cart").each(function () {
-                $(this).attr({
-                    "data-quantity": 0 //sets all quantities to 0
+                //change quantity for all items in cart to 0
+                $(".add-to-cart").each(function () {
+                    $(this).attr({
+                        "data-quantity": 0 //sets quantities to 0
                 });
-            })
+                $("#submit").fadeOut(function(){
+                    $("#done").fadeIn();
+                    $("#personal-info").fadeOut();
+                });
+                renderCart(cart, $('.cart-container'));
+                
+                
+            });
+            }
+
         }
     });
 
