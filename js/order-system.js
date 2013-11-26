@@ -40,15 +40,17 @@ $(function () {
             //loops through indices in array to check if item is present,
             //if it is, present = true and it replaces the existing quantity
             //with the new quantitu
-            for (i = 0; i < cart.items.length; ++i) {
+            for (i = 0; i < cart.items.length; i++) {
                 if (cart.items[i].name == this.getAttribute('data-name') &&
                     cart.items[i].size == this.getAttribute('data-size')) {
                     cart.items[i] = newCartItem;
-                    var present = true;
+                    console.log("present!");
+                    present = true;
                 }
             }
             //if item isn't present, creates a new cart item so it can display it
             if (!present) {
+                console.log("not present!");
                 cart.items.push(newCartItem);
             }
         }
@@ -162,10 +164,11 @@ function renderCart(cart, container) {
             size = item.size;
         }
         cartItemView.find(".size").html(item.quantity + " " + size);
+        var itemName = item.name;
         if (item.quantity > 1) {
-            item.name = item.name + "s"
+            itemName = itemName + "s";
         }
-        cartItemView.find(".title").html(item.name);
+        cartItemView.find(".title").html(itemName);
         cartItemView.find(".remove-item").attr({
             "data-index": idx
         });
