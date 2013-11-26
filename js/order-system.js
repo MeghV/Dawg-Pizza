@@ -85,7 +85,7 @@ $(function () {
                 $("#submit").fadeIn(); //fades in new "Submit" button
             });
 
-            $("#personal-info").fadeIn(); //fades in form info
+            $("#personal-info").slideDown(); //displays form info
 
         }
     });
@@ -102,13 +102,13 @@ $(function () {
                     $(this).attr({
                         "data-quantity": 0 //sets quantities to 0
                 });
+                //change "Submit" button back to order button;
+                //hide personal info inputs
                 $("#submit").fadeOut(function(){
                     $("#done").fadeIn();
-                    $("#personal-info").fadeOut();
+                    $("#personal-info").slideUp();
                 });
                 renderCart(cart, $('.cart-container'));
-                
-                
             });
             }
 
